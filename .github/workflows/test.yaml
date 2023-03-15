@@ -1,5 +1,4 @@
 name: Say hello
-run_name: Deploy to ${{ inputs.env }}
 on:
   workflow_dispatch:
     inputs:
