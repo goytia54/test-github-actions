@@ -1,0 +1,19 @@
+name: Say hello
+run_name: Deploy to ${{ inputs.env }}
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "Environment to deploy to"
+        required: true
+        type: choice
+        default: dev
+        options:
+          - dev
+          - qa
+jobs:
+  deploy:
+    runs-on: [self-hosted]
+    steps:
+      - name: hello there
+        run: echo "hello there"
